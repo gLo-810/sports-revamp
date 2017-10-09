@@ -7,7 +7,12 @@
   color: white;
   background-color: lighten($mainTeal, 15%);
   padding: 20px;
-  box-shadow: 0 3px;
+  box-shadow: 0 5px;
   width: 120px;
   text-align: center;
+
+  &:active{
+    box-shadow: 0 2px;
+    transform: translateY(4px);
+  }
 }
