@@ -2,7 +2,8 @@ let pGrid = document.getElementsByClassName('pic-grid-container'),
     textarea = document.querySelector('textarea'),
     baseball = document.getElementById('baseball'),
     football = document.getElementById('football'),
-    display = document.getElementById('displayBTN'),
+    display = document.getElementById('btn-display'),
+    reset = document.getElementById('btn-reset'),
     names = [],
     numbers;
 
@@ -27,29 +28,23 @@ function shuffle(a) {
 function displayEls() {
   // clear content to start fresh
    pGrid[0].innerHTML = "";
-  // create the elements
-  let newRow = document.createElement("div");
-  newRow.className = "row";
-  pGrid[0].appendChild(newRow);
   names.forEach(function(name, i) {
 
       let picContainer = document.createElement('div'),
         newImg = document.createElement('img'),
         newName = document.createElement('p');
   // append the elements
-
-
-    picContainer.className = "picture";
+    picContainer.className = "picture-frame";
     picContainer.appendChild(newImg);
     picContainer.appendChild(newName);
     newName.textContent = name;
-    newRow.appendChild(picContainer);
 
     if (baseball.checked) {
                newImg.src = "./assets/images/baseball/team" + numbers[i] + ".jpg";
              } else if (football.checked) {
                newImg.src = "./assets/images/football/team" + numbers[i] + ".gif";
              }
+    pGrid[0].appendChild(picContainer);
   });
 }
 
@@ -61,4 +56,8 @@ random.addEventListener('click', function() {
   shuffle(names);
   shuffle(numbers);
   displayEls();
+});
+
+reset.addEventListener('click', function() {
+  pGrid[0].innerHTML = "";
 });

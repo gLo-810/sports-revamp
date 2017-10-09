@@ -1,0 +1,9 @@
+.form-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.form-container form {
+  margin: auto;
+  font-size: 1.8rem;
+}

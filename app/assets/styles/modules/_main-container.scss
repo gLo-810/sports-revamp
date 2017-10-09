@@ -1,0 +1,13 @@
+@import '../base/_variables.scss';
+
+.main-container {
+ display: flex;
+ border: 5px solid;
+ border-color: $mainTeal;
+ border-radius: 15px;
+ margin: auto;
+ max-width: 1300px;
+ min-height: 617px;
+ padding: 10px;
+ font-weight: 600;
+}
