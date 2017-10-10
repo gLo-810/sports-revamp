@@ -1,4 +1,10 @@
+@import '../base/_mixins.scss';
+
 .list-container {
   display: flex;
   width: 12%;
+
+  @include bp-large {
+    width: 19%;
+  }
 }

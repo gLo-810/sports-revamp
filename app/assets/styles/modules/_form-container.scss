@@ -1,8 +1,21 @@
+@import '../base/_mixins.scss';
+
 .form-container{
   display: flex;
   margin-top: 10px;
   form {
     margin: auto;
     font-size: 1.8rem;
+
+    @include bp-large {
+      font-size: 1.5rem;
+    }
+
+    @include bp-medium {
+      font-size: 1.2rem;
+    }
+
    }
+
+
 }

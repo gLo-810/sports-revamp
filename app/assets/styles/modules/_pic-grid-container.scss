@@ -1,6 +1,23 @@
+@import '../base/_mixins.scss';
+
 .pic-grid-container {
   display: flex;
   flex-basis: 98%;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include bp-large {
+    flex-basis: 98%;
+  }
+
+  // @include bp-medium  {
+  //   width: 60%;
+  //   height: 60%;
+  // }
+  //
+  //
+  // @include bp-small {
+  //   width: 70%;
+  //   height: 70%;
+  // }
 }
