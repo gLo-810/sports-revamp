@@ -7,4 +7,9 @@
   @include bp-large {
     width: 19%;
   }
+
+   @include bp-small {
+    //list box gets squished here. 
+     display: none;
+  }
 }

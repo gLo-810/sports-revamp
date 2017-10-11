@@ -8,3 +8,9 @@
     width: 19%;
   }
 }
+
+@media only screen and (max-width: 616px) {
+  .list-container {
+    display: none;
+  }
+}
