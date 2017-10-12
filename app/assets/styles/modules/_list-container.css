@@ -1,15 +1,10 @@
 .list-container {
   display: flex;
-  width: 12%;
+  width: 163px;
+  height: 600px;
 }
 
-@media only screen and (max-width: 1070px) {
-  .list-container {
-    width: 19%;
-  }
-}
-
-@media only screen and (max-width: 616px) {
+@media only screen and (max-width: 592px) {
   .list-container {
     display: none;
   }

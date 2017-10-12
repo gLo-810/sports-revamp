@@ -2,14 +2,15 @@
 
 .list-container {
   display: flex;
-  width: 12%;
+  width: 163px;
+  height: 600px;
 
-  @include bp-large {
-    width: 19%;
-  }
-
+  // @include bp-large {
+  //   width: 19%;
+  // }
+  //
    @include bp-small {
-    //list box gets squished here. 
+    //list box gets squished here.
      display: none;
   }
 }

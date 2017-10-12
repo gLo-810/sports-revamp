@@ -1,19 +1,22 @@
 @import '../base/_mixins.scss';
+@import '../base/_variables.scss';
 
 .pic-grid-container {
   display: flex;
-  flex-basis: 98%;
   flex-wrap: wrap;
   justify-content: center;
+  border: 5px solid;
+  border-color: $mainTeal;
+  border-radius: 15px;
+  width: 1300px;
 
-  @include bp-large {
-    flex-basis: 98%;
-  }
-
-  // @include bp-medium  {
-  //   width: 60%;
-  //   height: 60%;
+  // @include bp-large {
+  //   flex-basis: 98%;
   // }
+
+  @include bp-medium  {
+  padding: 10px;
+  }
   //
   //
   // @include bp-small {

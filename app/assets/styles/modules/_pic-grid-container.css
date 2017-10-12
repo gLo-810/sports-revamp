@@ -1,12 +1,15 @@
 .pic-grid-container {
   display: flex;
-  flex-basis: 98%;
   flex-wrap: wrap;
   justify-content: center;
+  border: 5px solid;
+  border-color: #08a6ba;
+  border-radius: 15px;
+  width: 1300px;
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 892px) {
   .pic-grid-container {
-    flex-basis: 98%;
+    padding: 10px;
   }
 }

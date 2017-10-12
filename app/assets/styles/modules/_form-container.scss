@@ -2,7 +2,7 @@
 
 .form-container{
   display: flex;
-  margin-top: 10px;
+  margin-top: 1px;
   form {
     margin: auto;
     font-size: 1.8rem;
@@ -15,7 +15,11 @@
       font-size: 1.2rem;
     }
 
+    input {
+      @include bp-small {
+       //gets squished here.
+        display: none;
+     }
    }
-
-
-}
+  }
+ }

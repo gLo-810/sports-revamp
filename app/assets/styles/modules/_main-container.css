@@ -1,8 +1,5 @@
 .main-container {
   display: flex;
-  border: 5px solid;
-  border-color: #08a6ba;
-  border-radius: 15px;
   margin: auto;
   max-width: 1300px;
   min-height: 617px;
