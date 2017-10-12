@@ -8,6 +8,14 @@
 
   @include bp-medium {
     margin: 5px;
+    max-width: 95px;
+    max-height: 95px;
+  }
+
+  @include bp-xm-medium {
+    margin: 5px;
+    max-width: 65px;
+    max-height: 75px;
   }
 
   img {
@@ -22,9 +30,9 @@
       }
 
       @include bp-medium  {
-        width: 55%;
-        height: 55%;
-        margin-top: 13px;
+        width: 45%;
+        height: 45%;
+        margin-top: 3px;
       }
       //
       //
@@ -47,6 +55,11 @@
 
     @include bp-medium  {
       font-size: .87rem;
+    }
+
+    @include bp-xm-medium  {
+      font-size: .8rem;
+      width: 50px;
     }
     //
     //

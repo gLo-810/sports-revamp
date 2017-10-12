@@ -8,6 +8,16 @@
 @media only screen and (max-width: 892px) {
   .picture-frame {
     margin: 5px;
+    max-width: 95px;
+    max-height: 95px;
+  }
+}
+
+@media only screen and (max-width: 643px) {
+  .picture-frame {
+    margin: 5px;
+    max-width: 65px;
+    max-height: 75px;
   }
 }
 
@@ -26,9 +36,9 @@
 
 @media only screen and (max-width: 892px) {
   .picture-frame img {
-    width: 55%;
-    height: 55%;
-    margin-top: 13px;
+    width: 45%;
+    height: 45%;
+    margin-top: 3px;
   }
 }
 
@@ -49,5 +59,12 @@
 @media only screen and (max-width: 892px) {
   .picture-frame p {
     font-size: .87rem;
+  }
+}
+
+@media only screen and (max-width: 643px) {
+  .picture-frame p {
+    font-size: .8rem;
+    width: 50px;
   }
 }

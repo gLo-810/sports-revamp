@@ -9,8 +9,10 @@
   background-color: lighten($mainTeal, 5%);
   padding: 20px;
   box-shadow: 0 5px;
-  width: 120px;
+  // width: 120px;
   text-align: center;
+  flex-basis: 50%;
+  box-sizing: border-box;
 
   &:active{
     box-shadow: 0 2px;
@@ -23,5 +25,7 @@
 
   @include bp-medium {
     padding: 4px;
+    width: 80px;
+    flex-basis: 3%;
   }
 }

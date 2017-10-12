@@ -1,7 +1,14 @@
 .list-container {
   display: flex;
   width: 163px;
-  height: 600px;
+  height: 617px;
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 1131px) {
+  .list-container {
+    margin-left: 6px;
+  }
 }
 
 @media only screen and (max-width: 592px) {

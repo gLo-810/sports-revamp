@@ -6,8 +6,9 @@
   background-color: #09bcd3;
   padding: 20px;
   box-shadow: 0 5px;
-  width: 120px;
   text-align: center;
+  flex-basis: 50%;
+  box-sizing: border-box;
 }
 
 .btn:active {
@@ -15,14 +16,16 @@
   transform: translateY(4px);
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1131px) {
   .btn {
     padding: 10px;
   }
 }
 
-@media only screen and (max-width: 784px) {
+@media only screen and (max-width: 892px) {
   .btn {
     padding: 4px;
+    width: 80px;
+    flex-basis: 3%;
   }
 }
