@@ -1,20 +1,21 @@
 let pGrid = document.getElementsByClassName('pic-grid-container'),
-    textarea = document.querySelector('textarea'),
+    // textarea = document.querySelector('textarea'),
     baseball = document.getElementById('baseball'),
     football = document.getElementById('football'),
     display = document.getElementById('btn-display'),
     reset = document.getElementById('btn-reset'),
+    mainText = document.getElementById('main-text'),
     names = [],
     numbers;
 
 
 // save names without submitting
 function saveNames() {
-  names = textarea.value.split('\n');
+  names = mainText.value.split('\n');
   numbers = Array.from({length:names.length}).map((_,i)=>i); //creates a numbers array that is the same length as the names array, for indexing.
 }
 // save names to array, no submit button
-textarea.addEventListener('blur', saveNames, false);
+mainText.addEventListener('blur', saveNames, false);
 
 // shuffle arrays
 function shuffle(a) {
