@@ -1,0 +1,33 @@
+{
+  "name": "sports-revamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "browser-sync": "^2.23.3",
+    "gulp-postcss": "^7.0.1",
+    "postcss-color-function": "^4.0.1",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-simple-vars": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glo-810/sports-revamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glo-810/sports-revamp/issues"
+  },
+  "homepage": "https://github.com/glo-810/sports-revamp#readme"
+}

@@ -9,11 +9,12 @@
   text-align: center;
   flex-basis: 50%;
   box-sizing: border-box;
-}
 
-.btn:active {
-  box-shadow: 0 2px;
-  transform: translateY(4px);
+  &:active {
+    box-shadow: 0 2px;
+    transform: translateY(4px);
+  }
+
 }
 
 @media only screen and (max-width: 1131px) {

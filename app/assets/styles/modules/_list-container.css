@@ -3,16 +3,13 @@
   width: 163px;
   height: 617px;
   margin-left: 15px;
-}
 
-@media only screen and (max-width: 1131px) {
-  .list-container {
+  @include bp-large {
     margin-left: 6px;
   }
-}
 
-@media only screen and (max-width: 592px) {
-  .list-container {
-    display: none;
+   @include bp-small {
+    //list box gets squished here.
+     display: none;
   }
 }
