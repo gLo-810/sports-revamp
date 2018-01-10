@@ -22,9 +22,18 @@ gulp.task('watch', () => {
   watch('./app/assets/styles/**/*.css', () => {
     gulp.start('cssInject');
   });
+
+  watch('./app/assets/scripts/**/*.js', () => {
+    gulp.start('scripts');
+  });
+
 });
 
 gulp.task('cssInject', ['styles'], () => {
   gulp.src('./app/temp/styles/main.css')
     .pipe(browserSync.stream());
 });
+
+gulp.task('scriptsRefresh', ['scripts'], () => {
+  browserSync.reload();
+})
