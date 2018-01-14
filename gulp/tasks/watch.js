@@ -19,15 +19,15 @@ gulp.task('watch', function() {
     gulp.start('cssInject');
   });
 
-<<<<<<< HEAD
+
   watch('./app/assets/scripts/**/*.js', () => {
     gulp.start('scripts');
   });
-=======
+
   watch('./app/assets/scripts/**/*.js', function() {
     gulp.start('scriptsRefresh');
   })
->>>>>>> js-redo
+
 
 });
 
@@ -36,12 +36,11 @@ gulp.task('cssInject', ['styles'], function() {
     .pipe(browserSync.stream());
 });
 
-<<<<<<< HEAD
+
 gulp.task('scriptsRefresh', ['scripts'], () => {
   browserSync.reload();
 })
-=======
+
 gulp.task('scriptsRefresh', ['scripts'], function() {
   browserSync.reload();
 });
->>>>>>> js-redo
