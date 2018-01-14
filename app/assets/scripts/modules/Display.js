@@ -11,6 +11,7 @@ class Display extends SaveInput {
     this.football = $('#football');
     this.display = $('#btn-display');
     this.reset = $('#btn-reset');
+    this.random = $('#random');
     this.buttons();
   }
 
@@ -20,10 +21,16 @@ class Display extends SaveInput {
     this.reset.click( () => {
        this.pGrid.html("");
     });
+
+    this.random.click(() => {
+      this.shuffle(this.names);
+      this.shuffle(this.numbers);
+      this.displayEls();
+    });
   }
 
   //display images with names
-    displayEls() {
+  displayEls() {
     // clear content to start fresh
     let that = this;
     this.pGrid.html("");
@@ -45,6 +52,14 @@ class Display extends SaveInput {
        }
       that.pGrid.append($picContainer);
     });
+  }
+
+  // shuffle arrays
+  shuffle(a) {
+    for (let i = a.length; i; i--) {
+      let j = Math.floor(Math.random() * i);
+      [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
   }
 }
 

@@ -10410,60 +10410,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var saveInput = new _SaveInput2.default();
 var display = new _Display2.default();
 
-// const pGrid = document.getElementsByClassName('pic-grid-container');
-//     const baseball = document.getElementById('baseball');
-//     const football = document.getElementById('football');
-//     const display = document.getElementById('btn-display');
-//     const reset = document.getElementById('btn-reset');
-
-// shuffle arrays
-function shuffle(a) {
-  for (var i = a.length; i; i--) {
-    var j = Math.floor(Math.random() * i);
-    var _ref = [a[j], a[i - 1]];
-    a[i - 1] = _ref[0];
-    a[j] = _ref[1];
-  }
-}
-
-// //display images with names
-// function displayEls() {
-//   // clear content to start fresh
-//    pGrid[0].innerHTML = "";
-//   names.forEach(function(name, i) {
-//
-//       let picContainer = document.createElement('div'),
-//         newImg = document.createElement('img'),
-//         newName = document.createElement('p');
-//   // append the elements
-//     picContainer.className = "picture-frame";
-//     picContainer.appendChild(newImg);
-//     picContainer.appendChild(newName);
-//     newName.textContent = name;
-//
-//     if (baseball.checked) {
-//                newImg.src = "./assets/images/baseball/team" + numbers[i] + ".jpg";
-//              } else if (football.checked) {
-//                newImg.src = "./assets/images/football/team" + numbers[i] + ".gif";
-//              }
-//     pGrid[0].appendChild(picContainer);
-//   });
-// }
-
-// display.addEventListener('click', function() {
-//   displayEls();
-// });
-
-random.addEventListener('click', function () {
-  shuffle(names);
-  shuffle(numbers);
-  displayEls();
-});
-
-// reset.addEventListener('click', function() {
-//   pGrid[0].innerHTML = "";
-// });
-
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10507,6 +10453,7 @@ var Display = function (_SaveInput) {
     _this.football = (0, _jquery2.default)('#football');
     _this.display = (0, _jquery2.default)('#btn-display');
     _this.reset = (0, _jquery2.default)('#btn-reset');
+    _this.random = (0, _jquery2.default)('#random');
     _this.buttons();
     return _this;
   }
@@ -10520,6 +10467,12 @@ var Display = function (_SaveInput) {
 
       this.reset.click(function () {
         _this2.pGrid.html("");
+      });
+
+      this.random.click(function () {
+        _this2.shuffle(_this2.names);
+        _this2.shuffle(_this2.numbers);
+        _this2.displayEls();
       });
     }
 
@@ -10549,6 +10502,19 @@ var Display = function (_SaveInput) {
         }
         that.pGrid.append($picContainer);
       });
+    }
+
+    // shuffle arrays
+
+  }, {
+    key: 'shuffle',
+    value: function shuffle(a) {
+      for (var i = a.length; i; i--) {
+        var j = Math.floor(Math.random() * i);
+        var _ref = [a[j], a[i - 1]];
+        a[i - 1] = _ref[0];
+        a[j] = _ref[1];
+      }
     }
   }]);
 
