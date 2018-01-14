@@ -9,9 +9,8 @@ class SaveInput {
     this.numbers;
     this.events();
   }
-
   //events to watch for such as click
-  events() {
+   events() {
     // save names to array, no submit button
     this.mainText.blur(this.saveNameIndex.bind(this));
   }
@@ -19,7 +18,7 @@ class SaveInput {
   // methods to be called from events
 
   // save names without submitting
-  saveNameIndex() {
+   saveNameIndex() {
     let namesResult = this.names = this.mainText.val().split('\n');
 
     //creates a numbers array that is the same length as the names array, for indexing.
@@ -29,6 +28,7 @@ class SaveInput {
     console.log(numsResult);
    return {namesResult, numsResult};
   }
+
 }
 
 export default SaveInput;

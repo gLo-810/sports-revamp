@@ -1,34 +1,41 @@
 import $ from 'jquery';
+import SaveInput from './SaveInput';
 
-class Display {
+class Display extends SaveInput {
   // dom selection usually and firing events when a page loads.
-  constructor(){
-    const pGrid = document.getElementsByClassName('pic-grid-container');
-        const baseball = document.getElementById('baseball');
-        const football = document.getElementById('football');
-        const display = document.getElementById('btn-display');
-        const reset = document.getElementById('btn-reset');
-    this.events();
+  constructor(names, numbers){
+    super(names, numbers);
+
+    this.pGrid = $('.pic-grid-container');
+    this.baseball = $('#baseball');
+    this.football = $('#football');
+    this.display = $('#btn-display');
+    this.reset = $('#btn-reset');
+    this.buttons();
   }
 
-  //events to watch for such as click
-  events(){
-    display.addEventListener('click', function() {
-      displayEls();
-    });
 
-    reset.addEventListener('click', function() {
-      pGrid[0].innerHTML = "";
-    });
+  //events to watch for such as click
+    buttons (){
+
+    this.display.click(this.displayEls.bind(this));
+
+
+    // reset.addEventListener('click', function() {
+    //   pGrid[0].innerHTML = "";
+    // });
   }
 
   // methods to be called from events
 
   //display images with names
-  function displayEls() {
+
+
+    displayEls() {
     // clear content to start fresh
-     pGrid[0].innerHTML = "";
-    names.forEach(function(name, i) {
+    let that = this;
+    this.pGrid.html("");
+    this.names.forEach(function(name, i) {
 
         let picContainer = document.createElement('div'),
           newImg = document.createElement('img'),
@@ -40,14 +47,13 @@ class Display {
       newName.textContent = name;
 
       if (baseball.checked) {
-                 newImg.src = "./assets/images/baseball/team" + numbers[i] + ".jpg";
+                 newImg.src = "./assets/images/baseball/team" + that.numbers[i] + ".jpg";
                } else if (football.checked) {
-                 newImg.src = "./assets/images/football/team" + numbers[i] + ".gif";
+                 newImg.src = "./assets/images/football/team" + that.numbers[i] + ".gif";
                }
-      pGrid[0].appendChild(picContainer);
+      that.pGrid.append(picContainer);
     });
   }
-
 }
 
-export default ClassName;
+export default Display;

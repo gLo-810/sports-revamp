@@ -60,85 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _SaveInput = __webpack_require__(1);
-
-var _SaveInput2 = _interopRequireDefault(_SaveInput);
-
-var _Display = __webpack_require__(3);
-
-var _Display2 = _interopRequireDefault(_Display);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var saveInput = new _SaveInput2.default();
-var display = new _Display2.default();
-
-// const pGrid = document.getElementsByClassName('pic-grid-container');
-//     const baseball = document.getElementById('baseball');
-//     const football = document.getElementById('football');
-//     const display = document.getElementById('btn-display');
-//     const reset = document.getElementById('btn-reset');
-
-// shuffle arrays
-function shuffle(a) {
-  for (var i = a.length; i; i--) {
-    var j = Math.floor(Math.random() * i);
-    var _ref = [a[j], a[i - 1]];
-    a[i - 1] = _ref[0];
-    a[j] = _ref[1];
-  }
-}
-
-// //display images with names
-// function displayEls() {
-//   // clear content to start fresh
-//    pGrid[0].innerHTML = "";
-//   names.forEach(function(name, i) {
-//
-//       let picContainer = document.createElement('div'),
-//         newImg = document.createElement('img'),
-//         newName = document.createElement('p');
-//   // append the elements
-//     picContainer.className = "picture-frame";
-//     picContainer.appendChild(newImg);
-//     picContainer.appendChild(newName);
-//     newName.textContent = name;
-//
-//     if (baseball.checked) {
-//                newImg.src = "./assets/images/baseball/team" + numbers[i] + ".jpg";
-//              } else if (football.checked) {
-//                newImg.src = "./assets/images/football/team" + numbers[i] + ".gif";
-//              }
-//     pGrid[0].appendChild(picContainer);
-//   });
-// }
-
-// display.addEventListener('click', function() {
-//   displayEls();
-// });
-
-random.addEventListener('click', function () {
-  shuffle(names);
-  shuffle(numbers);
-  displayEls();
-});
-
-// reset.addEventListener('click', function() {
-//   pGrid[0].innerHTML = "";
-// });
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -150,7 +76,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jquery = __webpack_require__(2);
+var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -169,7 +95,6 @@ var SaveInput = function () {
     this.numbers;
     this.events();
   }
-
   //events to watch for such as click
 
 
@@ -206,7 +131,7 @@ var SaveInput = function () {
 exports.default = SaveInput;
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10466,10 +10391,176 @@ return jQuery;
 
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports) {
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/gaber/desktop/sports-revamp/app/assets/scripts/modules/Display.js: Unexpected token (28:11)\n\n  26 | \n  27 |   //display images with names\n> 28 |   function displayEls() {\n     |            ^\n  29 |     // clear content to start fresh\n  30 |      pGrid[0].innerHTML = \"\";\n  31 |     names.forEach(function(name, i) {\n");
+"use strict";
+
+
+var _SaveInput = __webpack_require__(0);
+
+var _SaveInput2 = _interopRequireDefault(_SaveInput);
+
+var _Display = __webpack_require__(3);
+
+var _Display2 = _interopRequireDefault(_Display);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var saveInput = new _SaveInput2.default();
+var display = new _Display2.default();
+
+// const pGrid = document.getElementsByClassName('pic-grid-container');
+//     const baseball = document.getElementById('baseball');
+//     const football = document.getElementById('football');
+//     const display = document.getElementById('btn-display');
+//     const reset = document.getElementById('btn-reset');
+
+// shuffle arrays
+function shuffle(a) {
+  for (var i = a.length; i; i--) {
+    var j = Math.floor(Math.random() * i);
+    var _ref = [a[j], a[i - 1]];
+    a[i - 1] = _ref[0];
+    a[j] = _ref[1];
+  }
+}
+
+// //display images with names
+// function displayEls() {
+//   // clear content to start fresh
+//    pGrid[0].innerHTML = "";
+//   names.forEach(function(name, i) {
+//
+//       let picContainer = document.createElement('div'),
+//         newImg = document.createElement('img'),
+//         newName = document.createElement('p');
+//   // append the elements
+//     picContainer.className = "picture-frame";
+//     picContainer.appendChild(newImg);
+//     picContainer.appendChild(newName);
+//     newName.textContent = name;
+//
+//     if (baseball.checked) {
+//                newImg.src = "./assets/images/baseball/team" + numbers[i] + ".jpg";
+//              } else if (football.checked) {
+//                newImg.src = "./assets/images/football/team" + numbers[i] + ".gif";
+//              }
+//     pGrid[0].appendChild(picContainer);
+//   });
+// }
+
+// display.addEventListener('click', function() {
+//   displayEls();
+// });
+
+random.addEventListener('click', function () {
+  shuffle(names);
+  shuffle(numbers);
+  displayEls();
+});
+
+// reset.addEventListener('click', function() {
+//   pGrid[0].innerHTML = "";
+// });
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _SaveInput2 = __webpack_require__(0);
+
+var _SaveInput3 = _interopRequireDefault(_SaveInput2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Display = function (_SaveInput) {
+  _inherits(Display, _SaveInput);
+
+  // dom selection usually and firing events when a page loads.
+  function Display(names, numbers) {
+    _classCallCheck(this, Display);
+
+    var _this = _possibleConstructorReturn(this, (Display.__proto__ || Object.getPrototypeOf(Display)).call(this, names, numbers));
+
+    _this.pGrid = (0, _jquery2.default)('.pic-grid-container');
+    _this.baseball = (0, _jquery2.default)('#baseball');
+    _this.football = (0, _jquery2.default)('#football');
+    _this.display = (0, _jquery2.default)('#btn-display');
+    _this.reset = (0, _jquery2.default)('#btn-reset');
+    _this.buttons();
+    return _this;
+  }
+
+  //events to watch for such as click
+
+
+  _createClass(Display, [{
+    key: 'buttons',
+    value: function buttons() {
+
+      this.display.click(this.displayEls.bind(this));
+
+      // reset.addEventListener('click', function() {
+      //   pGrid[0].innerHTML = "";
+      // });
+    }
+
+    // methods to be called from events
+
+    //display images with names
+
+
+  }, {
+    key: 'displayEls',
+    value: function displayEls() {
+      // clear content to start fresh
+      var that = this;
+      this.pGrid.html("");
+      this.names.forEach(function (name, i) {
+
+        var picContainer = document.createElement('div'),
+            newImg = document.createElement('img'),
+            newName = document.createElement('p');
+        // append the elements
+        picContainer.className = "picture-frame";
+        picContainer.appendChild(newImg);
+        picContainer.appendChild(newName);
+        newName.textContent = name;
+
+        if (baseball.checked) {
+          newImg.src = "./assets/images/baseball/team" + that.numbers[i] + ".jpg";
+        } else if (football.checked) {
+          newImg.src = "./assets/images/football/team" + that.numbers[i] + ".gif";
+        }
+        that.pGrid.append(picContainer);
+      });
+    }
+  }]);
+
+  return Display;
+}(_SaveInput3.default);
+
+exports.default = Display;
 
 /***/ })
 /******/ ]);
