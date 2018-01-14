@@ -10511,24 +10511,19 @@ var Display = function (_SaveInput) {
     return _this;
   }
 
-  //events to watch for such as click
-
-
   _createClass(Display, [{
     key: 'buttons',
     value: function buttons() {
+      var _this2 = this;
 
       this.display.click(this.displayEls.bind(this));
 
-      // reset.addEventListener('click', function() {
-      //   pGrid[0].innerHTML = "";
-      // });
+      this.reset.click(function () {
+        _this2.pGrid.html("");
+      });
     }
 
-    // methods to be called from events
-
     //display images with names
-
 
   }, {
     key: 'displayEls',
@@ -10538,21 +10533,21 @@ var Display = function (_SaveInput) {
       this.pGrid.html("");
       this.names.forEach(function (name, i) {
 
-        var picContainer = document.createElement('div'),
-            newImg = document.createElement('img'),
-            newName = document.createElement('p');
-        // append the elements
-        picContainer.className = "picture-frame";
-        picContainer.appendChild(newImg);
-        picContainer.appendChild(newName);
-        newName.textContent = name;
+        var $picContainer = (0, _jquery2.default)('<div class="picture-frame"></div>');
+        var $newImg = (0, _jquery2.default)('<img>');
+        var $newName = (0, _jquery2.default)('<p>');
+
+        // append to DOM
+        $newImg.appendTo($picContainer);
+        $newName.text(name);
+        $newName.appendTo($picContainer);
 
         if (baseball.checked) {
-          newImg.src = "./assets/images/baseball/team" + that.numbers[i] + ".jpg";
+          $newImg.attr('src', "./assets/images/baseball/team" + that.numbers[i] + ".jpg");
         } else if (football.checked) {
-          newImg.src = "./assets/images/football/team" + that.numbers[i] + ".gif";
+          $newImg.attr('src', "./assets/images/football/team" + that.numbers[i] + ".gif");
         }
-        that.pGrid.append(picContainer);
+        that.pGrid.append($picContainer);
       });
     }
   }]);
